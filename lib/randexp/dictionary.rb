@@ -1,6 +1,6 @@
 class Randexp::Dictionary
   def self.file_paths
-    @dictionary_path ||= %w[/usr/share/dict/words /usr/dict/words ~/.dict/words]
+    @dictionary_path ||= ["/usr/share/dict/words", "/usr/dict/words", "~/.dict/words",  "#{File.dirname(__FILE__)}/../../wordlists/darwin_words"]
   end
 
   def self.register(path)
