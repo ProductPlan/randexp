@@ -8,7 +8,7 @@ class Randexp::Dictionary
   end
 
   def self.load_dictionary
-    if path = file_paths.detect {|path| File.exists?(File.expand_path(path)) }
+    if path = file_paths.detect {|path| File.exist?(File.expand_path(path)) }
       File.read(path).split
     else
       raise "Words file not found. Check if it is installed in (/usr/share/dict/words or /usr/dict/words) "

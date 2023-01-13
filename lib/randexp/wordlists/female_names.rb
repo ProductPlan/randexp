@@ -2,7 +2,7 @@ class RealName
 
   def self.load_female_first_names
     dir = File.dirname(__FILE__)
-    if File.exists?("#{dir}/../../../wordlists/female_names")
+    if File.exist?("#{dir}/../../../wordlists/female_names")
       File.read("#{dir}/../../../wordlists/female_names").split
     else
       raise "words file not found"
